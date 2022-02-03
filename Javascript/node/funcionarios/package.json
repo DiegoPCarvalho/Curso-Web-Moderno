@@ -1,0 +1,18 @@
+{
+  "name": "funcionarios",
+  "version": "1.3.8",
+  "description": "prog",
+  "main": "func.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": ""
+  },
+  "keywords": [
+    "now"
+  ],
+  "author": "Diego",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}

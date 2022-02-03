@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicio HTML</h1>
+    </header>
+    <nav>
+        <a href="teste.html">Texto 1</a>||
+        <a href="texto_tag1.html">texto 2</a>||
+        <a href="texto_tag2.html">texto 3</a>||
+        <a href="lista.html">Lista</a>||
+        <a href="listasAninhadas.html">Lista 2</a>||
+        <a href="link.html">Link 1</a>||
+        <a href="link2.html">Link 2</a>||
+        <a href="tabela.html">tabela</a>||
+        <a href="form/formulario.html">Formulario</a>||
+        <a href="imagens.html">Imagens</a>||
+        <a href="video.html">Video</a>
+
+        
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+    <script>
+       document.querySelectorAll('a').forEach(link =>{
+          const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e){
+               e.preventDefault()
+                    fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

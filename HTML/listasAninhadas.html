@@ -1,0 +1,50 @@
+<h1>Lista Aninhadas</h1>
+<ul class="tree">
+    <li>
+        <span wm> Backend</span>
+        <ul>
+            <li>
+                <span wm>  app </span>
+                <ul>
+                    <li>Projeto.js</li>
+                    <li>Usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span wm> config </span>
+                <ul>
+                    <li>banco</li>
+                    <li>rotas</li>
+                    <li>servidor</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span wm>Frontend</span>
+        <ul>
+            <li>
+                <span wm>Publico</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+                
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[wm]').forEach(folder => {
+       folder.onclick = function(e){
+           const ul = folder.nextElementSibling
+           const d = ul.style.display
+           ul.style.display = d === 'none' ? 'block' : 'none'
+       }
+   }) 
+</script>
