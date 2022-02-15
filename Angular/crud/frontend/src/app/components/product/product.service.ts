@@ -1,13 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NativeDateAdapter } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { Product } from './product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private snackbar: MatSnackBar) { }
+  baseUrl = "http://localhost:3001/product"
+
+  constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string): void {
     this.snackbar.open(msg, 'X',{
@@ -16,5 +20,8 @@ export class ProductService {
       verticalPosition: "top"
     
     })
+  }
+  create(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, product)
   }
 }
