@@ -19,6 +19,16 @@
       "name": "Produto de Teste",
       "price": 195.98,
       "id": 4
+    },
+    {
+      "name": "veio do Formulario",
+      "price": "123456",
+      "id": 5
+    },
+    {
+      "name": "Lapis Azul",
+      "price": 15.50,
+      "id": 6
     }
   ]
 }
