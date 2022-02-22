@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
@@ -11,14 +12,22 @@ import { Product } from '../product.model';
 export class ProductReadComponent implements OnInit {
 
   products: Product[] = [] 
+  displayedColumns = ['id', 'name', 'price', 'action']
 
-  constructor(private ProductService: ProductService) {}
+
+  constructor(private ProductService: ProductService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.ProductService.read().subscribe(products =>{
       this.products = products
-      console.log(products)
+
+      
     })   
   } 
+
+  // navigateUpdate(): void{
+  //   this.router.navigate(['/products/update/:id'])
+  // }
+
 
 }

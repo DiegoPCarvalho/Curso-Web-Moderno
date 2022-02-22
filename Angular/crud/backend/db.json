@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta BIC Preta",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Notebook MAC Pro",
       "price": 12000.89
@@ -27,8 +22,18 @@
     },
     {
       "name": "Lapis Azul",
-      "price": 15.50,
+      "price": 15.5,
       "id": 6
+    },
+    {
+      "name": "lavanda",
+      "price": "123",
+      "id": 7
+    },
+    {
+      "name": "livro casados por engano",
+      "price": "123456",
+      "id": 8
     }
   ]
 }
